@@ -6,3 +6,5 @@ RUN xcaddy build \
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+CMD ["caddy", "run", "--config", "/config/caddy.json"]
